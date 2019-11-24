@@ -7,4 +7,6 @@ RUN b2
 
 FROM ubuntu
 COPY --from=builder /bootstrap-dht/dht-bootstrap .
+EXPOSE 80/tcp
+EXPOSE 80/udp
 RUN dht-bootstrap $IP
